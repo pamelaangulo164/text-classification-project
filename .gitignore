@@ -9,3 +9,7 @@ venv/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore model checkpoints and results
+results/
+saved_model/
