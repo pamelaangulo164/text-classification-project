@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 
-# Virtual environments
+# Virtual environment directories
 env/
 venv/
 
@@ -10,6 +10,7 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Ignore model checkpoints and results
+# Model checkpoints and results
 results/
 saved_model/
+
