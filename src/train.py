@@ -15,11 +15,11 @@ def train_model():
     # Define training arguments
     training_args = TrainingArguments(
         output_dir="./results",
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
-        num_train_epochs=3,
+        num_train_epochs=1,
         weight_decay=0.01,
         logging_dir="./logs",
         logging_steps=100,
@@ -35,7 +35,7 @@ def train_model():
     )
 
     # Train the model
-    trainer.train(resume_from_checkpoint="results/checkpoint-3125")
+    trainer.train()
 
     # Save the model after training
     model.save_pretrained("./saved_model")
