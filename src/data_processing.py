@@ -20,7 +20,7 @@ def load_and_preprocess_data(tokenizer_name="bert-base-uncased", max_length=256)
     # Tokenize the dataset (batched=True for efficiency)
     tokenized_datasets = dataset.map(tokenize_function, batched=True)
     
-    # Format the dataset to PyTorch tensors (for compatibility with your model)
+    # Format the dataset to PyTorch tensors (for compatibility with the model)
     tokenized_datasets.set_format("torch", columns=["input_ids", "attention_mask", "label"])
     
     return tokenized_datasets
